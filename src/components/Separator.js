@@ -2,7 +2,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-const Separator = () => {
+const Separator = () => (
   <View
     style={{
       borderBottomColor: '#d3d3d3',
@@ -10,7 +10,7 @@ const Separator = () => {
       marginTop: 10,
       marginBottom: 10,
     }}
-  />;
-};
+  />
+);
 
 export default Separator;
