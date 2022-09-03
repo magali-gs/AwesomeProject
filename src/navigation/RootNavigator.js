@@ -10,11 +10,24 @@ const RootStack = createNativeStackNavigator();
 
 const linking = {
   prefixes: ['awesomeProject://'],
+  config: {
+    initialRouteName: 'Home',
+    screens: {
+      Home: {
+        path: 'home',
+      },
+      Details: {
+        path: 'details',
+      },
+    },
+  },
 };
 
 const RootNavigator = () => {
   return (
-    <NavigationContainer linking={linking}>
+    <NavigationContainer
+      linking={linking}
+      fallback={<ActivityIndicator color="blue" size={'large'} />}>
       <RootStack.Navigator>
         <RootStack.Screen name="Home" component={HomeScreen} />
         <RootStack.Screen name="Details" component={DetailsScreen} />
